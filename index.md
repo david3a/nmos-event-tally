@@ -13,26 +13,26 @@ The formal IS-07 Specification is provided in [this GitHub repository](https://g
 The documenation and API links immediately below, and the links in the page heading, are for the _most recent approved release_ of the Specification (which may be earlier than what is shown by the default branch on the GitHub repo). Links to [other releases (tags)](tags/) and [other branches](branches/) appear later in the page, or under "VERSIONS..." in the page heading.
 
 
-## Documentation for v1.0
+## Documentation for v1.0.1
 
-- [Overview](tags/v1.0/docs/1.0._Overview.md)
-- [Message types](tags/v1.0/docs/2.0._Message_types.md)
-- [Event types](tags/v1.0/docs/3.0._Event_types.md)
-- [Core models](tags/v1.0/docs/4.0._Core_models.md)
-- [Transports](tags/v1.0/docs/5.0._Transports.md)
-  - [MQTT](tags/v1.0/docs/5.1._Transport_-_MQTT.md)
-  - [Websocket](tags/v1.0/docs/5.2._Transport_-_Websocket.md)
-- [Event and tally rest api](tags/v1.0/docs/6.0._Event_and_tally_rest_api.md)
-- [Measurement units guidelines](tags/v1.0/docs/7.0._Measurement_units_guidelines.md)
+- [Overview](tags/v1.0.1/docs/1.0._Overview.md)
+- [Message types](tags/v1.0.1/docs/2.0._Message_types.md)
+- [Event types](tags/v1.0.1/docs/3.0._Event_types.md)
+- [Core models](tags/v1.0.1/docs/4.0._Core_models.md)
+- [Transports](tags/v1.0.1/docs/5.0._Transports.md)
+  - [MQTT](tags/v1.0.1/docs/5.1._Transport_-_MQTT.md)
+  - [Websocket](tags/v1.0.1/docs/5.2._Transport_-_Websocket.md)
+- [Event and tally rest api](tags/v1.0.1/docs/6.0._Event_and_tally_rest_api.md)
+- [Measurement units guidelines](tags/v1.0.1/docs/7.0._Measurement_units_guidelines.md)
 
-## APIs for v1.0
+## APIs for v1.0.1
 
-- [EventsAPI](tags/v1.0/html-APIs/EventsAPI.html)
+- [EventsAPI](tags/v1.0.1/html-APIs/EventsAPI.html)
 
-### [JSON Schemas](tags/v1.0/html-APIs/schemas/)
+### [JSON Schemas](tags/v1.0.1/html-APIs/schemas/)
 
 
-### [Examples](tags/v1.0/examples/)
+### [Examples](tags/v1.0.1/examples/)
 
 
 ## Branches
@@ -44,3 +44,5 @@ The documenation and API links immediately below, and the links in the page head
 ## Tags (Releases)
 
 [v1.0](tags/v1.0/)
+
+[v1.0.1](tags/v1.0.1/)
