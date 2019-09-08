@@ -1,6 +1,4 @@
-# AMWA IS-07 NMOS Event and Tally Specification
-
-AMWA has reserved IS-07 for an NMOS Specification for event and tally
+AMWA NMOS IS-07 provides a mechanism by which to emit and consume states and state changes issued by sources (sensors, actuators etc).
 
 It has been developed by the [Advanced Media Workflow Association](https://www.amwa.tv) as part of the [Networked Media Open Specifications](https://www.nmos.tv) initative.
 
