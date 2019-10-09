@@ -4,11 +4,11 @@
 
 ## Examples for branch v1.0.x
 
-- [connection-status-message](connection-status-message.json)
 - [connectionapi-v1.1-receiver-active-get-mqtt-200](connectionapi-v1.1-receiver-active-get-mqtt-200.json)
 - [connectionapi-v1.1-receiver-active-get-websocket-200](connectionapi-v1.1-receiver-active-get-websocket-200.json)
 - [connectionapi-v1.1-sender-active-get-mqtt-200](connectionapi-v1.1-sender-active-get-mqtt-200.json)
 - [connectionapi-v1.1-sender-active-get-websocket-200](connectionapi-v1.1-sender-active-get-websocket-200.json)
+- [connection-status-message](connection-status-message.json)
 - [eventsapi-base-get-200](eventsapi-base-get-200.json)
 - [eventsapi-sourceid-get-200](eventsapi-sourceid-get-200.json)
 - [eventsapi-sources-get-200](eventsapi-sources-get-200.json)
