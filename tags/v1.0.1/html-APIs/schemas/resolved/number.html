@@ -1,0 +1,46 @@
+---
+layout: default
+title: Schema number.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Schema number.json</h2>
+<p>
+    <a href="../../schemas/with-refs/number.html">Show referenced schemas with $ref</a>
+</p>
+<div id="json-render"></div>
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+    "$id": "https://www.amwa.tv/event_and_tally/number.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Number",
+    "properties": {
+        "scale": {
+            "description": "Denominator for rational number representation (default = 1)",
+            "minimum": 1,
+            "type": "integer"
+        },
+        "value": {
+            "description": "Number value",
+            "type": "number"
+        }
+    },
+    "required": [
+        "value"
+    ],
+    "type": "object"
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+
+</html>

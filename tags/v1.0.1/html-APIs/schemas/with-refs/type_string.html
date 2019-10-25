@@ -1,0 +1,60 @@
+---
+layout: default
+title: Schema type_string.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Schema type_string.json</h2>
+<p>
+    <a href="../../schemas/resolved/type_string.html">Resolve referenced schemas</a>
+</p>
+<div id="json-render"></div>
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+  "$id": "https://www.amwa.tv/event_and_tally/type_string.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Type definition for the string type",
+  "title": "String Type",
+  "additionalProperties": false,
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "description": "Base type name",
+      "type": "string",
+      "enum": [
+        "string"
+      ]
+    },
+    "min_length": {
+      "description": "Minimum string length",
+      "type": "integer",
+      "minimum": 0
+    },
+    "max_length": {
+      "description": "Maximum string length",
+      "type": "integer",
+      "minimum": 1
+    },
+    "pattern": {
+      "description": "Regular expression constraining the value",
+      "type": "string"
+    }
+  }
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+
+</html>

@@ -1,0 +1,46 @@
+---
+layout: default
+title: Schema type_boolean.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Schema type_boolean.json</h2>
+<p>
+    <a href="../../schemas/resolved/type_boolean.html">Resolve referenced schemas</a>
+</p>
+<div id="json-render"></div>
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+  "$id": "https://www.amwa.tv/event_and_tally/type_boolean.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Type definition for the boolean type",
+  "title": "Boolean Type",
+  "additionalProperties": false,
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "description": "Base type name",
+      "type": "string",
+      "enum": [
+        "boolean"
+      ]
+    }
+  }
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+
+</html>

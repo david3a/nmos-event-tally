@@ -1,0 +1,55 @@
+---
+layout: default
+title: Schema command_subscription.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Schema command_subscription.json</h2>
+<p>
+    <a href="../../schemas/resolved/command_subscription.html">Resolve referenced schemas</a>
+</p>
+<div id="json-render"></div>
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+  "$id": "https://www.amwa.tv/event_and_tally/command_subscription.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Command that subscribes the receiver to receive the state change messages for the specified sources",
+  "title": "Subscription command",
+  "required": [
+    "command",
+    "sources"
+  ],
+  "properties": {
+    "command": {
+      "description": "A fixed string showing this is a subscription command",
+      "type": "string",
+      "pattern": "^subscription$"
+    },
+    "sources": {
+      "type": "array",
+      "description": "A list of Event & Tally sources to subscribe to",
+      "items": {
+        "description": "IDs of the Event & Tally compatible sources",
+        "type": "string",
+        "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  }
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+
+</html>
