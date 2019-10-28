@@ -2,6 +2,8 @@
 
 # {{ site.github.project_tagline }}
 
+[![Build Status](https://travis-ci.com/AMWA-TV/nmos-event-tally.svg)](https://travis-ci.com/AMWA-TV/nmos-event-tally)
+
 AMWA NMOS IS-07 provides a mechanism by which to emit and consume states and state changes issued by sources (sensors, actuators etc).
 
 It has been developed by the [Advanced Media Workflow Association](https://www.amwa.tv) as part of the [Networked Media Open Specifications](https://www.nmos.tv) initative.
