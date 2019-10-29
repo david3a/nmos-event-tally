@@ -1,0 +1,39 @@
+---
+layout: default
+title: Example eventsapi-v1.0-type-number-measurement-get-200.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Example eventsapi-v1.0-type-number-measurement-get-200.json</h2>
+<div id="json-render">
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+  "type": "number",
+  "min": {
+    "value": -200.0,
+    "scale": 10
+  },
+  "max": {
+    "value": 1000,
+    "scale": 10
+  },
+  "step": {
+    "value": 1,
+    "scale":10
+  },
+  "unit": "C"
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+</div>
+</html>

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Schema command.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Schema command.json</h2>
+<p>
+    <a href="../../schemas/resolved/command.html">Resolve referenced schemas</a>
+</p>
+<div id="json-render">
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+  "$id": "https://www.amwa.tv/event_and_tally/command.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Allowed commands (communication from the receiver to the sender)",
+  "title": "Command",
+  "oneOf": [{
+    "$ref": "command_health.json"
+  }, {
+    "$ref": "command_subscription.json"
+  }]
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+</div>
+</html>

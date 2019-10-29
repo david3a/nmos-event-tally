@@ -1,0 +1,42 @@
+---
+layout: default
+title: Schema message.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Schema message.json</h2>
+<p>
+    <a href="../../schemas/resolved/message.html">Resolve referenced schemas</a>
+</p>
+<div id="json-render">
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+  "$id": "https://www.amwa.tv/event_and_tally/message.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Allowed messages (communication from the sender to the receiver)",
+  "title": "Message",
+  "oneOf": [{
+    "$ref": "event.json"
+  }, {
+    "$ref": "message_connection_status.json"
+  }, {
+    "$ref": "message_health.json"
+  }, {
+    "$ref": "message_shutdown_reboot.json"
+  }]
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+</div>
+</html>

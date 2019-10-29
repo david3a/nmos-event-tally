@@ -1,0 +1,54 @@
+---
+layout: default
+title: Schema event_object.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Schema event_object.json</h2>
+<p>
+    <a href="../../schemas/resolved/event_object.html">Resolve referenced schemas</a>
+</p>
+<div id="json-render">
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+  "$id": "https://www.amwa.tv/event_and_tally/event_object.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Describes an event with object payload",
+  "title": "Object event",
+  "allOf": [
+    { "$ref": "event_core.json" },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "description": "Event type",
+          "type": "string",
+          "pattern": "^object(?:\\/[a-zA-Z_\\-])*$"
+        },
+        "payload": {
+          "description": "Object payload",
+          "type": "object"
+        }
+      }
+    }
+  ]
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+</div>
+</html>
