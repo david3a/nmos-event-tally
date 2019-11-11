@@ -4,16 +4,44 @@
 
 [![Build Status](https://travis-ci.com/AMWA-TV/nmos-event-tally.svg)](https://travis-ci.com/AMWA-TV/nmos-event-tally)
 
-AMWA NMOS IS-07 provides a mechanism by which to emit and consume states and state changes issued by sources (sensors, actuators etc).
 
-It has been developed by the [Advanced Media Workflow Association](https://www.amwa.tv) as part of the [Networked Media Open Specifications](https://www.nmos.tv) initative.
+
+---
+
+## About IS-07
+
+
+### What does it do?
+
+- Provides an IP-friendly mechanism to carry time-sensitive information
+  - For example: camera tally information, audio levels, control panel button presses and status
+
+### Why does it matter?
+
+- ST 2110 does not provide an equivalent to GPI functionality
+  - This leads to the danger of multiple proprietary approaches
+- Consistency with other NMOS specifications
+
+### How does it work?
+
+- Media Nodes emit and consume state and state change info
+- Lightweight messages sent using WebSockets or MQTT
+- Message flows connected using IS-05
+
+
+
+---
+
+
+IS-07 has been developed by the [Advanced Media Workflow Association](https://www.amwa.tv) as part of the [Networked Media Open Specifications](https://www.nmos.tv) initiative.
 
 See [here](https://amwa-tv.github.io/nmos) for an overview of NMOS specifications.
 
-The formal IS-07 Specification is provided in [this GitHub repository](https://github.com/AMWA-TV/nmos-event-tally). These pages provide supporting documentation and HTML renders of the APIs (RAML and JSON Schema).
+The formal (template) specification is provided in [this GitHub repository](https://github.com/AMWA-TV/nmos-event-tally). These pages provide supporting documentation and HTML renders of the APIs (which are specified in RAML and JSON Schema).
 
-The documentation and API links immediately below, and the links in the page heading, are for the _most recent approved release_ of the Specification (which may be earlier than what is shown by the default branch on the GitHub repo). Links to [other releases (tags)](tags/) and [other branches](branches/) appear later in the page, or under "VERSIONS..." in the page heading.
+The documentation and API links immediately below, and the links in the page heading, are for an example development branch. Links to [other releases (tags)](tags/) and [other branches](branches/) appear later in the page, or under "VERSIONS..." in the page heading.
 
+Once AMWA has approved a Specification, its documentation and API links will be for the _most recent approved release_ (which may be earlier than what is shown by the default branch on the GitHub repo).
 
 ## Documentation for release/tag v1.0.1
 
