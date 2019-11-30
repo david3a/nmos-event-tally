@@ -17,9 +17,9 @@
 
 ## APIs for branch v1.0.x
 
-- [EventsAPI](html-APIs/EventsAPI.html)
+- [EventsAPI](APIs/EventsAPI.html)
 
-### [JSON Schemas](html-APIs/schemas/)
+### [JSON Schemas](APIs/schemas/)
 
 
 ### [Examples](examples/)

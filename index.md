@@ -57,9 +57,9 @@ Once AMWA has approved a Specification, its documentation and API links will be 
 
 ## APIs for release/tag v1.0.1
 
-- [EventsAPI](tags/v1.0.1/html-APIs/EventsAPI.html)
+- [EventsAPI](tags/v1.0.1/APIs/EventsAPI.html)
 
-### [JSON Schemas](tags/v1.0.1/html-APIs/schemas/)
+### [JSON Schemas](tags/v1.0.1/APIs/schemas/)
 
 
 ### [Examples](tags/v1.0.1/examples/)

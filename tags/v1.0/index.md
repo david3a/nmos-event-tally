@@ -17,9 +17,9 @@
 
 ## APIs for release/tag v1.0
 
-- [EventsAPI](html-APIs/EventsAPI.html)
+- [EventsAPI](APIs/EventsAPI.html)
 
-### [JSON Schemas](html-APIs/schemas/)
+### [JSON Schemas](APIs/schemas/)
 
 
 ### [Examples](examples/)
