@@ -2,7 +2,7 @@
 
 # {{ site.github.project_tagline }}
 
-[![Build Status](https://travis-ci.com/AMWA-TV/nmos-event-tally.svg)](https://travis-ci.com/AMWA-TV/nmos-event-tally)
+[![Build Status](https://travis-ci.com/AMWA-TV/nmos-event-tally.svg?branch=v1.0.x)](https://travis-ci.com/AMWA-TV/nmos-event-tally)
 
 
 
