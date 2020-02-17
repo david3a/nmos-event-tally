@@ -2,8 +2,9 @@
 
 # {{ site.github.project_tagline }}
 
-[![Build Status](https://travis-ci.com/AMWA-TV/nmos-event-tally.svg?branch=v1.0.x)](https://travis-ci.com/AMWA-TV/nmos-event-tally)
-
+| Repository | Default Branch | Lint (default) | Render (all) |
+| --- | --- | --- | --- |
+| [nmos-event-tally](https://github.com/AMWA-TV/nmos-event-tally) | v1.0.x | <a href="https://travis-ci.com/AMWA-TV/nmos-event-tally?branch=v1.0.x"><img src="https://travis-ci.com/AMWA-TV/nmos-event-tally.svg?branch=v1.0.x" width="100"/></a> | <a href="https://travis-ci.com/AMWA-TV/nmos-event-tally?branch=gh-pages"><img src="https://travis-ci.com/AMWA-TV/nmos-event-tally.svg?branch=gh-pages" width="100"/></a> |
 
 
 ---
