@@ -1,0 +1,207 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Events",
+    "version": "v1.0"
+  },
+  "servers": [
+    {
+      "url": "http://example.api.com/x-nmos/events/{version}",
+      "variables": {
+        "version": {
+          "default": "version"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": "Can not resolve ../examples/eventsapi-base-get-200.json",
+                "schema": {
+                  "$ref": "#/components/schemas/Base"
+                }
+              }
+            }
+          }
+        },
+        "description": "List of paths available from this API",
+        "operationId": "GET_root"
+      }
+    },
+    "/sources": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": "Can not resolve ../examples/eventsapi-sources-get-200.json",
+                "schema": {
+                  "$ref": "#/components/schemas/Sources"
+                }
+              }
+            }
+          }
+        },
+        "description": "List of the Event & Tally compatible sources",
+        "operationId": "GET_sources"
+      }
+    },
+    "/sources/{sourceId}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": "Can not resolve ../examples/eventsapi-sourceid-get-200.json",
+                "schema": {
+                  "$ref": "#/components/schemas/Source"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Returned when the requested Source ID does not exist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorSchema"
+                }
+              }
+            }
+          }
+        },
+        "description": "Get a single source",
+        "operationId": "GET_sources-sourceId"
+      },
+      "parameters": [
+        {
+          "name": "sourceId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/sources/{sourceId}/type": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": "Can not resolve ../examples/eventsapi-type-boolean-get-200.json",
+                "schema": {
+                  "$ref": "#/components/schemas/Type"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Returned when the requested Source ID does not exist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorSchema"
+                }
+              }
+            }
+          }
+        },
+        "description": "JSON containing detailed type information",
+        "operationId": "GET_sources-sourceId-type"
+      },
+      "parameters": [
+        {
+          "name": "sourceId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/sources/{sourceId}/state": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": "Can not resolve ../examples/eventsapi-state-boolean-get-200.json",
+                "schema": {
+                  "$ref": "#/components/schemas/Event"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Returned when the requested Source ID does not exist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorSchema"
+                }
+              }
+            }
+          }
+        },
+        "description": "JSON containing the last state change notification sent over the transport protocols",
+        "operationId": "GET_sources-sourceId-state"
+      },
+      "parameters": [
+        {
+          "name": "sourceId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+            "type": "string"
+          }
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "Base": {
+        "$ref": "#/components/schemas/Can not resolve schemas/base.json"
+      },
+      "Sources": {
+        "$ref": "#/components/schemas/Can not resolve schemas/sources.json"
+      },
+      "Source": {
+        "$ref": "#/components/schemas/Can not resolve schemas/source.json"
+      },
+      "Event": {
+        "$ref": "#/components/schemas/Can not resolve schemas/event.json"
+      },
+      "Type": {
+        "$ref": "#/components/schemas/Can not resolve schemas/type.json"
+      },
+      "ErrorSchema": {
+        "$ref": "#/components/schemas/Can not resolve schemas/error.json"
+      }
+    },
+    "responses": {},
+    "parameters": {},
+    "examples": {},
+    "requestBodies": {},
+    "headers": {},
+    "securitySchemes": {},
+    "links": {},
+    "callbacks": {}
+  }
+}
