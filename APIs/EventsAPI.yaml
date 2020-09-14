@@ -1,0 +1,139 @@
+openapi: 3.0.0
+info:
+  title: Events
+  version: v1.0
+  contact:
+    name: David Atkins
+    email: david@3adesign.co.uk
+  description: 'AMWA IS-07 NMOS Event & Tally Specification  '
+servers:
+  - url: 'http://example.api.com/x-nmos/events/{version}'
+    variables:
+      version:
+        default: version
+paths:
+  /:
+    get:
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              example: ../examples/eventsapi-base-get-200.json
+              schema:
+                $ref: schemas/base.json
+      description: List of paths available from this API
+      operationId: GET_root
+  /sources:
+    get:
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              example: ../examples/eventsapi-sources-get-200.json
+              schema:
+                $ref: schemas/sources.json
+      description: List of the Event & Tally compatible sources
+      operationId: GET_sources
+  '/sources/{sourceId}':
+    get:
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              example: ../examples/eventsapi-sourceid-get-200.json
+              schema:
+                $ref: schemas/source.json
+              examples:
+                example-1:
+                  value:
+                    - type/
+        '404':
+          description: Returned when the requested Source ID does not exist
+          content:
+            application/json:
+              schema:
+                $ref: schemas/error.json
+      description: Get a single source
+      operationId: GET_sources-sourceId
+    parameters:
+      - name: sourceId
+        in: path
+        required: true
+        schema:
+          pattern: '^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$'
+          type: string
+  '/sources/{sourceId}/type':
+    get:
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              example: ../examples/eventsapi-type-boolean-get-200.json
+              schema:
+                $ref: schemas/type.json
+        '404':
+          description: Returned when the requested Source ID does not exist
+          content:
+            application/json:
+              schema:
+                $ref: schemas/error.json
+      description: JSON containing detailed type information
+      operationId: GET_sources-sourceId-type
+    parameters:
+      - name: sourceId
+        in: path
+        required: true
+        schema:
+          pattern: '^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$'
+          type: string
+  '/sources/{sourceId}/state':
+    get:
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              example: ../examples/eventsapi-state-boolean-get-200.json
+              schema:
+                $ref: schemas/event.json
+        '404':
+          description: Returned when the requested Source ID does not exist
+          content:
+            application/json:
+              schema:
+                $ref: schemas/error.json
+      description: JSON containing the last state change notification sent over the transport protocols
+      operationId: GET_sources-sourceId-state
+    parameters:
+      - name: sourceId
+        in: path
+        required: true
+        schema:
+          pattern: '^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$'
+          type: string
+components:
+  schemas:
+    Base:
+      $ref: schemas/base.json
+    Sources:
+      $ref: schemas/sources.json
+    Source:
+      $ref: schemas/source.json
+    Event:
+      $ref: schemas/event.json
+    Type:
+      $ref: schemas/type.json
+    ErrorSchema:
+      $ref: schemas/error.json
+  responses: {}
+  parameters: {}
+  examples: {}
+  requestBodies: {}
+  headers: {}
+  securitySchemes: {}
+  links: {}
+  callbacks: {}
