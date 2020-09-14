@@ -19,7 +19,7 @@ paths:
           description: ''
           content:
             application/json:
-              example: ../examples/eventsapi-base-get-200.json
+              example: [ "sources/" ]
               schema:
                 $ref: schemas/base.json
       description: List of paths available from this API
@@ -31,7 +31,8 @@ paths:
           description: ''
           content:
             application/json:
-              example: ../examples/eventsapi-sources-get-200.json
+              example: [ "1ea39324-a32b-4e1d-86e9-33f9956ebc60/",
+                         "f9c7b88b-1846-43d9-9e53-c230e77d91ac/" ]
               schema:
                 $ref: schemas/sources.json
       description: List of the Event & Tally compatible sources
@@ -43,7 +44,8 @@ paths:
           description: ''
           content:
             application/json:
-              example: ../examples/eventsapi-sourceid-get-200.json
+              example: [ "state/",
+                         "type/" ]
               schema:
                 $ref: schemas/source.json
               examples:
@@ -72,7 +74,7 @@ paths:
           description: ''
           content:
             application/json:
-              example: ../examples/eventsapi-type-boolean-get-200.json
+              example: { "type": "boolean" }
               schema:
                 $ref: schemas/type.json
         '404':
@@ -97,7 +99,13 @@ paths:
           description: ''
           content:
             application/json:
-              example: ../examples/eventsapi-state-boolean-get-200.json
+              example: { "identity": 
+                          { "source_id": "1ea39324-a32b-4e1d-86e9-33f9956ebc60" },
+                          "event_type": "boolean",
+                          "timing": { "creation_timestamp": "1532504241:104000200" },
+                          "payload": { "value": false },
+                          "message_type": "state" 
+                        }
               schema:
                 $ref: schemas/event.json
         '404':
